@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	let rightAnswerCount = 0;
+
+	let questions = [
+		'столица России',
+		'столица Германии',
+		'столица США'
+	];
+
+	let answers = [
+		'Москва',
+		'Берлин',
+		'Вашингтон'
+	];
+
+	for (let i = 0; i < questions.length; i++){
+		
+		let userAnswer = prompt(questions[i] + '?');
+	
+		if (userAnswer == answers[i]) {
+			alert('Правильно!');
+			rightAnswerCount++;
+		} else if (userAnswer != answers[i]){
+			alert('Неверно');
+		}
+	}
+	
+	alert('Игра окончена, правильных ответов: '+ rightAnswerCount);
+
+</script>

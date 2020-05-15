@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	let sum = parseInt(prompt('сумма вклада:'));
+	let stavka = parseInt(prompt('годовая ставка, % :'));
+	let years = parseInt(prompt('срок вклада, лет:'));
+
+	for (var i = 1; i <= years; i++) {
+		let delta = (sum * stavka) / 100;
+		sum = sum + Math.floor(delta);
+		console.log('========================');
+		console.log('year: ' + i);
+		console.log('delta: ' + delta);
+		console.log('sum: ' + sum);			
+    }
+
+	alert('через '+ years + ' лет на вкладе будет ' + sum + 'руб.');
+</script>
