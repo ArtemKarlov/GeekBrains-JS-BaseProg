@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function getRandomNumberMax(max){
+		return Math.round(Math.random() * max);
+	}
+
+	function generateText(letters, length) {
+		let sequance = "";
+		for (let i = 0; i < length; i++) {
+			let n = getRandomNumberMax(letters.length - 1);
+			sequance +=  letters[n];
+		}
+		return sequance;
+	}
+
+	function blindeTypingLevel(level, letters, length){
+		while (true) {
+			alert("Уровень № " + level + "\n\nПоставьте мизинец левой руки на букву Ф, \nбезымянный палец — на Ы, \nсредний — на В, \nуказательный — на А. \n\nМизинец правой руки на букву Ж, \nбезымянный палец — на Д, \nсредний — на Л, \nуказательный — на О.\n\nЗапомните расположение пальцев. Повторяйте за мной");
+			
+			let text = generateText(letters, length);
+			let userText = prompt(text);
+			if (userText == text) {
+				alert("Правильно");
+				break;
+			} else {
+				alert("Неправильно, попробуйте еще раз");
+			}
+		}
+	}
+
+	alert("Добро пожаловать!");
+
+	let levelLetters = [
+			["ф", "а"],
+			["ы", "в"],
+			["о", "ж"],
+			["л", "д"],
+			["ф", "а", "в"],
+		];
+	let length = 10;
+
+	for (let i = 0; i < levelLetters.length; i++) {
+		blindeTypingLevel((i + 1), levelLetters[i], length);
+	}
+
+	alert("До новых встреч!");
+	
+</script>

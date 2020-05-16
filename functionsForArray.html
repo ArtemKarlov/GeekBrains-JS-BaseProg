@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function genIntArray(n) {
+		let array = [];
+		for (let i = 0; i < n; i++) {
+			array[i] = i + 1;
+		}
+		return array;
+	}
+
+	function sumOfArray(array) {
+		let sum = 0;
+		for (let i = 0; i < array.length; i++) {
+			sum += array[i];
+		}
+		return sum;
+	}
+
+	function maxOfArray(array) {
+		let max = array[0];
+		for (let i = 0; i < array.length; i++) {
+			if (array[i] > max) {
+				max = array[i];
+			}
+		}
+		return max;
+	}
+
+	function minOfArray(array) {
+		let min = array[0];
+		for (let i = 0; i < array.length; i++) {
+			if (array[i] < min) {
+				min = array[i];
+			}
+		}
+		return min;
+	}
+
+	function evenOfArray(array) {
+		let arrayOfEven = [];
+		for (let i = 0; i < array.length; i++) {
+			if ((array[i] % 2) == 0) {
+				arrayOfEven.push(array[i]);
+			}
+		}
+		return arrayOfEven;
+	}
+
+	let testArray = [5, 4, 1, 0, 56, 6, 2, 3, 8, 7];
+	console.log(testArray);
+	console.log(evenOfArray(testArray));
+
+</script>

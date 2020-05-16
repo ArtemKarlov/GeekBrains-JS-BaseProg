@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script>
+function generateText(message, letters, length) {
+    var text = '';
+    for (var i = 0; i < length; i++)
+    {
+        var n = getRandomNumber(letters.length - 1);
+        text = text + letters[n];
+    }
+    alert(message);
+    return text;
+}
+function getRandomNumber(max) {
+    return Math.round(Math.random() * max);
+}
+
+function answerValidator(userAnswer, generateText) {
+    if (userText == text) {
+        alert('Все верно!');
+        return true;
+    } else {
+        alert('У вас ошибка, попробуйте еще раз');
+    }
+}
+
+var tasks = [
+ ['Положите 4 пальца наклавиши ф, ы, в, а, так чтобы А была под указательным пальцем, а Ф под мизинцем. \n Набирайте текст не спеша, стараясь не смотреть на клавиатуру', ['ф', 'а'], 10],
+ ['Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной', ['ы', 'в'], 10],
+ ['Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О. Запомните расположение пальцев', ['о', 'ж'], 10],
+ ];
+
+for(var i = 0; i < tasks.length; i++) {
+    while(true) {
+        var text = generateText(tasks[i][0],tasks[i][1],tasks[i][2]);
+        var userText = prompt(text);
+        if (answerValidator(userText, text) == true) break;
+    }
+}
+</script>
