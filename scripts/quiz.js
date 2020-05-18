@@ -22,23 +22,23 @@
 
 
 		function runQuiz(question, answersArray) {
-		let userAnswer = (prompt(question + '?')).toLowerCase();
-		let isRight = false;
-	
-		for (let i = 0; i < answersArray.length; i++) {
-			if (userAnswer == answersArray[i]) {
-				isRight = true;
-				break;
+			let userAnswer = (prompt(question + '?')).toLowerCase();
+			let isRight = false;
+		
+			for (let i = 0; i < answersArray.length; i++) {
+				if (userAnswer == answersArray[i]) {
+					isRight = true;
+					break;
+				}
+			}
+			if (isRight) {
+				alert('Правильно');
+				return 1;
+			} else {
+				alert('Неверно');
+				return 0;
 			}
 		}
-		if (isRight) {
-			alert('Правильно');
-			return 1;
-		} else {
-			alert('Неверно');
-			return 0;
-		}
-	}
 
 
 	let rightAnswerCount = 0;

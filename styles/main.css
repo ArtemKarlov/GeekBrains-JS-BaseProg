@@ -65,12 +65,34 @@ main p {
 }
 
 main form {
+    width: 600px;
     padding: 30px; 
     background-color: #ddd;
 }
 
 main form label {
+    display: inline-block;
+    margin: 10px;
+    font-size: 24px;
+    color: #4a4a7f;
+}
+
+main form input {
+    width: 200px;
+    /*height: 20px;*/
+    padding: 5px;
     font-size: 20px;
+}
+
+main form button {
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 10px;
+    background-color: #7a7aff;
+    font-size: 18px;
 }
 
 .footer {

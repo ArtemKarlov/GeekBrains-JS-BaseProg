@@ -25,13 +25,17 @@
             <h1>Викторина</h1>
             <main>
                 <form action="#">
-                    <label for="userAnswer1" id="qustion1"></label><br>
+                    <label for="userAnswer1" id="qustion1">#</label><br>
                     <input type="text" id="userAnswer1"><br>
-                    <label for="userAnswer1" id="qustion2"></label><br>
+                    <label for="userAnswer2" id="qustion2">#</label><br>
                     <input type="text" id="userAnswer2"><br>
-                    <label for="userAnswer1" id="qustion3"></label><br>
-                    <input type="text" id="userAnswer3">
+                    <label for="userAnswer3" id="qustion3">#</label><br>
+                    <input type="text" id="userAnswer3"><br>
+                    <label for="userAnswer4" id="qustion4">#</label><br>
+                    <input type="text" id="userAnswer4"><br>
+                    <button onclick="checkAnswers()">Проверить</button>
                 </form>
+                <p>Правильных ответов: <span id="score">0</span></p>
             </main>
         </div>
         
