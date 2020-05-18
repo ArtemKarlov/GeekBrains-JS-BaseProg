@@ -64,6 +64,11 @@ main p {
     width: 350px;
 }
 
+main form {
+    padding: 30px; 
+    background-color: #ddd;
+}
+
 .footer {
     height: 20px;
     padding: 20px;
