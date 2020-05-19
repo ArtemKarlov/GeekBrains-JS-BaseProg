@@ -23,8 +23,22 @@
         
         <div class="content">
             <h1>Игра угадайка на двоих</h1>
+            <p>Введите число от 0 до 100</p>
             <main>
-                <p>guessingGame2</p>
+                <form action="">
+                    <div>
+                        <div class="userBox">
+                            <label for="user1Answer">Игрок 1</label><br>
+                            <input type="text" id="user1Answer">
+                        </div>
+                        <div class="userBox">
+                            <label for="user2Answer">Игрок 2</label><br>
+                            <input type="text" id="user2Answer">
+                        </div>
+                    </div>
+                    <button class="button" onclick="checkAnsewrs2()">проверить</button>
+                    <span id="test"></span>
+                </form>
             </main>
         </div>
         
@@ -32,6 +46,6 @@
             &copy; 2020
         </footer>
     </div>
-    <script src="scripts/test.js"></script>
+    <script src="scripts/guessingGame2.js"></script>
 </body>
 </html>

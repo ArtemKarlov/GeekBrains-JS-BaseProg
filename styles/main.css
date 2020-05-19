@@ -84,7 +84,7 @@ main form input {
     font-size: 20px;
 }
 
-main form button {
+main form .button {
     width: 100px;
     height: 30px;
     margin: 20px;
@@ -93,6 +93,22 @@ main form button {
     border-radius: 10px;
     background-color: #7a7aff;
     font-size: 18px;
+}
+
+main form p {
+    text-align: center;
+    margin: 0 auto;
+    color: #4a4a7f;
+    font-size: 22px;
+}
+
+main form p span {
+    font-weight: bold;
+}
+
+main form > div {
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer {
