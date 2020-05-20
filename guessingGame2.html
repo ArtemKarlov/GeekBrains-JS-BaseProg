@@ -17,27 +17,29 @@
                 <li><a href="index.html">home</a></li>
                 <li><a href="quiz.html">quiz</a></li>
                 <li><a href="guessingGame2.html">guessing</a></li>
-                <li><a href="genPassword.html">password generator</a></li>
+                <li><a href="passwordGenerator.html">password generator</a></li>
             </ul>
         </nav>
         
         <div class="content">
             <h1>Игра угадайка на двоих</h1>
-            <p>Введите число от 0 до 100</p>
             <main>
                 <form action="">
+                    <label>
+                        <p>Введите число от 0 до 100</p><br>Осталось попыток: <span id="tryCount"></span></label>
                     <div>
                         <div class="userBox">
                             <label for="user1Answer">Игрок 1</label><br>
-                            <input type="text" id="user1Answer">
+                            <input type="text" id="user1Answer"><br>
+                            <label><span id="user1Compare"></span></label>
                         </div>
                         <div class="userBox">
                             <label for="user2Answer">Игрок 2</label><br>
-                            <input type="text" id="user2Answer">
+                            <input type="text" id="user2Answer"><br>
+                            <label><span id="user2Compare"></span></label>
                         </div>
                     </div>
-                    <button class="button" onclick="checkAnsewrs2()">проверить</button>
-                    <span id="test"></span>
+                    <button class="button" type="button" id="checkButton" onclick="checkAnsewrs()">проверить</button>
                 </form>
             </main>
         </div>

@@ -42,17 +42,48 @@
 
 	let answer = parseInt(Math.random()*100);
 	console.log(answer);
+	let maxTryCount = 5;
+	let tryCount = 1;
+	document.getElementById("tryCount").innerHTML = maxTryCount;
 
-	function checkAnsewrs2() {
-		let user1Answer = +document.getElementById("user1Answer").value;
-		document.getElementById("test").innerHTML = user1Answer;
-		// document.getElementById("qustion1").innerHTML
+	function checkAnsewr(n) {
+		let answerId = 'user' + n + 'Answer';
+		let compareId = 'user' + n + 'Compare';
+		let userAnswer = +document.getElementById(answerId).value;
 
-		if (user1Answer == answer) {
-			console.log('ok');
+		if (userAnswer == answer) {
+			document.getElementById(compareId).innerHTML = 'Вы выиграли';
+			hide("checkButton");
+			hide("user1Answer");
+			hide("user2Answer");
+		} else if (userAnswer > answer) {
+			document.getElementById(compareId).innerHTML = 'Слишком много';
+		} else if (userAnswer < answer) {
+			document.getElementById(compareId).innerHTML = 'Слишком мало';
 		}
-		else {
-			console.log('not ok');
+	}
+
+	function hide(id) {
+		document.getElementById(id).style.display = "none";
+	}
+
+	function checkAnsewrs() {
+		document.getElementById("tryCount").innerHTML = maxTryCount - tryCount;
+		if (tryCount <= maxTryCount) {
+			checkAnsewr(1);
+			checkAnsewr(2);
+		} 
+		if (tryCount == maxTryCount) {
+			hide("checkButton");
+			hide("user1Answer");
+			hide("user2Answer");
+		}
+
+		tryCount++;
+
+		let inputs = document.querySelectorAll('input[type=text]');
+		for (let i = 0;  i < inputs.length; i++) {
+			inputs[i].value = '';
 		}
 	}
 	
