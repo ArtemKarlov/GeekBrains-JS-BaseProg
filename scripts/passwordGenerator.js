@@ -11,8 +11,10 @@ function genPassword(n) {
 
 	for (let i = 0; i < n; i++) {
 		let randomIndex = getRandomNumberMax(symbols.length);
-		console.log(symbols[randomIndex]);
-		if ((Math.round(Math.random()) == 1) && (isNaN(Number(symbols[randomIndex])))) {
+		let randomTrigger = Math.round(Math.random());
+		console.log(i + ':' + Number(symbols[randomIndex]) + ':' + randomTrigger);
+		
+		if ((randomTrigger == 1) && (isNaN(Number(symbols[randomIndex])))) {
 			password += (symbols[randomIndex]).toUpperCase();
 		} else {
 			password += symbols[randomIndex];	
