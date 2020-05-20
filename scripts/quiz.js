@@ -95,11 +95,11 @@ function checkAnswers() {
 
    document.getElementById("score").innerHTML = score;
 
-   var inputs = document.querySelectorAll('input[type=text]');
-	for (var i = 0;  i < inputs.length; i++) {
+   //обнуление полей и счетчика
+   let inputs = document.querySelectorAll('input[type=text]');
+	for (let i = 0;  i < inputs.length; i++) {
 		inputs[i].value = '';
 	};
-
 	score = 0;
 
 }
