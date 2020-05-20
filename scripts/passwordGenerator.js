@@ -10,7 +10,13 @@ function genPassword(n) {
 	let password = '';
 
 	for (let i = 0; i < n; i++) {
-		password += symbols[getRandomNumberMax(symbols.length)];
+		let randomIndex = getRandomNumberMax(symbols.length);
+		console.log(symbols[randomIndex]);
+		if ((Math.round(Math.random()) == 1) && (isNaN(Number(symbols[randomIndex])))) {
+			password += (symbols[randomIndex]).toUpperCase();
+		} else {
+			password += symbols[randomIndex];	
+		}	
 	}
 	return password;
 }
@@ -20,3 +26,8 @@ function getPassword() {
 	document.getElementById("password").innerHTML = genPassword(n);
 }
 
+// for (var i = 0; i < 50; i++) {
+// 	console.log(i + ": " +Math.round(Math.random()));
+
+// }
+	
